@@ -1,0 +1,11 @@
+<!-- app/views/rooms/show.html.erb -->
+
+<div class="card my-4">
+  <%= image_tag @room.image%>
+  <div class="card-body">
+    <h5>Very cozy room</h5>
+    <p ><strong>Price per Night:</strong> <%=(@room.price_per_night) %>Є</p>
+    <p ><strong>Capacity:</strong> <%= @room.capacity %> people</p>
+    <%= render "form"%>
+  </div>
+</div>

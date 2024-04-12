@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class = "white-text mb-3">
+  <h5>WELCOME TO CHEAP SLEEP</h5>
+  checkout all the <strong><%= link_to "ROOMS", rooms_path%></strong> available
+</div>
+
+<% @hotels.each do |hotel| %>
+  <div class="card rounded-4 border border-2 mb-3" style="background-color: #ffffff;">
+    <%= link_to rooms_path do %>
+    <div class = :>
+      <%= image_tag hotel.image, style: "width:100%;border-radius: 15px;" %>
+    </div>
+    <% end %>
+      <div>
+        <p><strong> <%= hotel.name%></strong></p>
+        <p><%= hotel.address%></p>
+      </div>
+  </div>
+<% end %>

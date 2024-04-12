@@ -1,0 +1,15 @@
+
+<h1 class="white-text">My Bookings</h1>
+
+
+    <% @bookings.each do |booking| %>
+    <div class = "card mb-3">
+      <%= image_tag booking.room.image %>
+
+    <strong>chez</strong>  <%= booking.user.email %> <br>
+     <strong>arrival: </strong> <%= booking.starts_at %> <br>
+     <strong>Departure: </strong> <%= booking.ends_at %>
+    </div>
+    <% end %>
+  </tbody>
+</table>
