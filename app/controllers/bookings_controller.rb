@@ -11,6 +11,8 @@ class BookingsController < ApplicationController
   def create
     @room = Room.find(params[:room_id])
     @booking = @room.bookings.new(booking_params)
+    @booking.user = current_user
+
     if @booking.save!
       redirect_to room_path(@room), notice: 'Room reserved successfully!'
     else
@@ -21,6 +23,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:starts_at, :ends_at)
+    params.require(:booking).permit(:starts_at)
   end
 end

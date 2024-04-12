@@ -7,5 +7,7 @@
     <p ><strong>Price per Night:</strong> <%=(@room.price_per_night) %>Є</p>
     <p ><strong>Capacity:</strong> <%= @room.capacity %> people</p>
     <%= render "form"%>
+    <br>
+    want to see more <%= link_to "availabe rooms", rooms_path%> ?
   </div>
 </div>

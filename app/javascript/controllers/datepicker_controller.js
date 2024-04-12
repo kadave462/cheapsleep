@@ -5,6 +5,9 @@ import flatpickr from "flatpickr"; // You need to import this to use new flatpic
 // Connects to data-controller="datepicker"
 export default class extends Controller {
   connect() {
-   flatpickr(this.element)
+   flatpickr(this.element, {
+      mode: "range",
+      dateFormat: "Y-m-d",
+    });
   }
 }
