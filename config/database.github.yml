@@ -5,4 +5,4 @@ test:
   port: 5432
   username: postgres
   password: postgres
-  database: rails_book_rooms_challenge_test
+  database: cheapsleep_test
